@@ -1,2 +1,3 @@
 # K8s-HealthCheck
 Application for checking health check if Kubernetes cluster, pods etc
+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
