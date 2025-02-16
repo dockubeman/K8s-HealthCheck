@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes Health Checks</title>
+</head>
+<body>
+    <h1>Kubernetes Health Checks</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <ul>
+        <li><a href="{{ url_for('check_nodes') }}">Check Node Status</a></li>
+        <li><a href="{{ url_for('check_pods') }}">Check Pod Status</a></li>
+        <li><a href="{{ url_for('check_deployments') }}">Check Deployment Status</a></li>
+        <li><a href="{{ url_for('check_services') }}">Check Service Status</a></li>
+        <li><a href="{{ url_for('check_pvc') }}">Check PVC Status</a></li>
+    </ul>
+</body>
+</html>
